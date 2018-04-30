@@ -21,4 +21,5 @@ RUN  apt-get update \
   && wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
   && unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin \
   && rm -rf /var/lib/apt/lists/* \
+  && rm /terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
   && echo "PS1='Terraform Azure Sandbox >> '" >> /root/.bashrc
